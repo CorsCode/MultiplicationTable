@@ -1,0 +1,7 @@
+{
+	"name": "MultiplicationTable",
+	"private": true,
+	"dependencies": {
+		"materialize": "latest"
+	}
+}
