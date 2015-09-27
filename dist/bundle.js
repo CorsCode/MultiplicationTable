@@ -20,14 +20,21 @@ function create_table(table_length) {
 	return table;
 }
 
+function begin_learning() {
+	//alert("Begin learning!");
+	$("html, body").animate({
+		scrollTop: $("#begin").offset().top
+	}, 1000);
+}
+
 (function($) {
 	var table = $("#table"),
-		begin_button = $("#start > button");
+		begin_button = $("#intro button");
 	
 	//table.html(create_table(12));
 
 	begin_button.click(function() {
-		alert("Begin learning!");
+		begin_learning();
 	});
 })(jQuery);
 

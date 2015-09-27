@@ -1,11 +1,26 @@
 body,
 html {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+body {
+  overflow: hidden;
+}
+/* SCROLLING */
+.panel {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  position: relative;
 }
 /* INTRO */
-.intro {
+#intro {
+  position: relative;
   text-align: center;
   text-transform: uppercase;
+}
+#intro > .inner {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -13,18 +28,14 @@ html {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.intro > h1 {
-  font-weight: 900;
+#intro h1 {
   margin: 0;
+  font-weight: 900;
 }
 /* MULTIPLICATION TABLE */
 #table {
   margin-top: 50px;
 }
 #table .col {
-  text-align: center;
-}
-/* START */
-#start {
   text-align: center;
 }
