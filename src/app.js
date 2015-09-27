@@ -1,6 +1,4 @@
-(function() {
-	var table_length = 12;
-
+function create_table(table_length) {
 	var table = "";
 
 	var x, y;
@@ -18,5 +16,16 @@
 		table += row;
 	}
 
-	document.getElementById("table").innerHTML = table;
-})();
+	return table;
+}
+
+(function($) {
+	var table = $("#table"),
+		begin_button = $("#start > button");
+	
+	//table.html(create_table(12));
+
+	begin_button.click(function() {
+		alert("Begin learning!");
+	});
+})(jQuery);
