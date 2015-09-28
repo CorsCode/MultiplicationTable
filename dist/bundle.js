@@ -23,15 +23,23 @@ function create_table(table_length) {
 function begin_learning() {
 	//alert("Begin learning!");
 	$("html, body").animate({
-		scrollTop: $("#begin").offset().top
+		scrollTop: $("#before_begin").offset().top
 	}, 1000);
 }
 
 (function($) {
 	var table = $("#table"),
-		begin_button = $("#intro button");
-	
-	//table.html(create_table(12));
+		begin_button = $("#intro button"),
+		intro = $('#intro'),
+		introOffset = intro.offset().top,
+		before_begin = $('#before_begin');
+
+	$(document).on("scroll", function() {
+		if($(document).scrollTop() > introOffset && !intro.hasClass("hidden")) {
+			intro.addClass("hidden");
+			before_begin.removeClass("hidden");
+		}
+	});
 
 	begin_button.click(function() {
 		begin_learning();

@@ -7,6 +7,10 @@ html {
 body {
   overflow: hidden;
 }
+h1 {
+  margin: 0;
+  font-weight: 900;
+}
 /* SCROLLING */
 .panel {
   width: 100vw;
@@ -14,23 +18,47 @@ body {
   z-index: 0;
   position: relative;
 }
-/* INTRO */
-#intro {
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-}
-#intro > .inner {
-  position: relative;
+.inner {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-#intro h1 {
-  margin: 0;
-  font-weight: 900;
+.hidden h1,
+.hidden h3,
+.hidden button {
+  opacity: 0;
+  transform: translate3d(0, 0, 0) rotateY(40deg);
+}
+/* INTRO */
+#intro {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+  transform: perspective(1px);
+}
+#intro > .inner {
+  position: relative;
+}
+#intro h1,
+#intro button {
+  transition: all 0.5s ease;
+}
+/* BEFORE BEGIN */
+#before_begin {
+  position: relative;
+  text-align: center;
+}
+#before_begin > .inner {
+  width: 100vw;
+  position: absolute;
+}
+#before_begin h1,
+#before_begin h3,
+#before_begin button {
+  transition: all 1s ease;
 }
 /* MULTIPLICATION TABLE */
 #table {
