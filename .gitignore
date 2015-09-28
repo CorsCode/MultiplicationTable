@@ -1,1 +1,4 @@
 node_modules
+src/js
+src/less
+src/app.js
