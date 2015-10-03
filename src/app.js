@@ -19,18 +19,20 @@ function create_table(table_length) {
 	return table;
 }
 
+function scroll_to(scrollTop) {
+	$("html, body").animate({
+		scrollTop: scrollTop
+	}, 1000);
+}
+
 function begin_learning() {
 	//alert("Begin learning!");
-	$("html, body").animate({
-		scrollTop: $("#before_begin").offset().top
-	}, 1000);
+	scroll_to($("#before_begin").offset().top);
 }
 function begin_table(table) {
 	table.children('.inner').children('.container').html(create_table(12));
 
-	$("html, body").animate({
-		scrollTop: table.offset().top
-	}, 1000);
+	scroll_to(table.offset().top);
 }
 function begin_basic() {
 	// TODO: add basic lessons to get user up to speed with multiplication table
