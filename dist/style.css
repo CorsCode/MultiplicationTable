@@ -25,9 +25,10 @@ h1 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.hidden h1,
-.hidden h3,
-.hidden button {
+.hidden .inner h1,
+.hidden .inner h3,
+.hidden .inner div,
+.hidden .inner button {
   opacity: 0;
   transform: translate3d(0, 0, 0) rotateY(40deg);
 }
@@ -62,8 +63,12 @@ h1 {
 }
 /* MULTIPLICATION TABLE */
 #table {
-  margin-top: 50px;
-}
-#table .col {
+  position: relative;
   text-align: center;
+}
+#table > .inner {
+  position: relative;
+}
+#table div {
+  transition: all 1s ease;
 }

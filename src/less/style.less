@@ -30,9 +30,11 @@ h1 {
 }
 
 .hidden {
-	h1, h3, button {
-		opacity:0;
-		transform:translate3d(0, 0, 0) rotateY(40deg);
+	.inner {
+		h1, h3, div, button {
+			opacity:0;
+			transform:translate3d(0, 0, 0) rotateY(40deg);
+		}
 	}
 }
 
@@ -71,9 +73,14 @@ h1 {
 
 /* MULTIPLICATION TABLE */
 #table {
-	margin-top:50px;
-	
-	.col {
-		text-align:center;
+	position:relative;
+	text-align:center;
+
+	> .inner {
+		position:relative;
+	}
+
+	div {
+		transition:all 1s ease;
 	}
 }
