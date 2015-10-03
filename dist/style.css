@@ -27,7 +27,7 @@ h1 {
 }
 .hidden .inner h1,
 .hidden .inner h3,
-.hidden .inner div,
+.hidden .inner div.container,
 .hidden .inner button {
   opacity: 0;
   transform: translate3d(0, 0, 0) rotateY(40deg);
@@ -69,6 +69,6 @@ h1 {
 #table > .inner {
   position: relative;
 }
-#table div {
+#table div.container {
   transition: all 1s ease;
 }
